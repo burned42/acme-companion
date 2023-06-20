@@ -198,7 +198,6 @@ function update_cert {
     # Set relevant --server parameter and ca folder name
     params_base_arr+=(--server "$acme_ca_uri")
     local ca_dir="${acme_ca_uri##*://}" \
-        && ca_dir="${ca_dir%%/*}" \
         && ca_dir="${ca_dir%%:*}"
 
     local certificate_dir
